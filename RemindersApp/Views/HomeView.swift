@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct HomeView: View {
+    @FetchRequest(sortDescriptors: [])
+    private var myListResults: FetchedResults<MyList>
+    
     @State private var isPresented = false
     
     var body: some View {
         NavigationStack {
             VStack {
-                Text("My List of Reminders")
+                
+                MyListView(myLists: myListResults)
                 
                 Spacer()
                 
@@ -21,6 +25,11 @@ struct HomeView: View {
                     isPresented = true
                 } label: {
                     Text("Add List")
+                        .padding(11)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(15)
+                        .shadow(radius: 12)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .font(.headline)
                 }.padding()
