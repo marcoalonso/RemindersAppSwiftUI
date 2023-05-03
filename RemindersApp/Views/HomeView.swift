@@ -13,7 +13,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Hello ")
+                Text("My List of Reminders")
                 
                 Spacer()
                 
@@ -28,7 +28,11 @@ struct HomeView: View {
             .sheet(isPresented: $isPresented) {
                 NavigationView {
                     AddNewListView { name, color in
-                        //Save 
+                        do {
+                            try ReminderService.saveMyList(name, color)
+                        } catch {
+                            print("Debug: error \(error.localizedDescription)")
+                        }
                     }
                 }
             }
@@ -40,5 +44,6 @@ struct HomeView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environment(\.managedObjectContext, CoreDataProvider.shared.persistentContainer.viewContext)
     }
 }
