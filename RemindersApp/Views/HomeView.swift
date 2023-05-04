@@ -17,7 +17,7 @@ struct HomeView: View {
         NavigationStack {
             VStack {
                 
-                MyListView(myLists: myListResults)
+                MyListsView(myLists: myListResults)
                 
                 Spacer()
                 
