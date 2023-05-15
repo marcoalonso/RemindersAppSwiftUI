@@ -8,39 +8,46 @@
 import SwiftUI
 
 struct MyListDetailView: View {
-    @State private var openAddReminder : Bool = false
-    @State private var title : String = ""
+    
+    let myList: MyList
+    @State private var openAddReminder: Bool = false
+    @State private var title: String = ""
+    
+    @FetchRequest(sortDescriptors: [])
+    private var reminderResults: FetchedResults<Reminder>
     
     private var isFormValid: Bool {
         !title.isEmpty
     }
     
-    let myList : MyList
+    init(myList: MyList) {
+        self.myList = myList
+        _reminderResults = FetchRequest(fetchRequest: ReminderService.getRemindersByList(myList: myList))
+    }
     
     var body: some View {
         VStack {
-            
-            //List Reminders
+                
+            // Display List of Reminders
+            ReminderListView(reminders: reminderResults)
             
             HStack {
+                Image(systemName: "plus.circle.fill")
                 Button("New Reminder") {
                     openAddReminder = true
                 }
             }.foregroundColor(.blue)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
-            
-        }
-        .alert("New Reminder", isPresented: $openAddReminder) {
+        }.alert("New Reminder", isPresented: $openAddReminder) {
             TextField("", text: $title)
             Button("Cancel", role: .cancel) { }
             Button("Done") {
-             
                 if isFormValid {
                     do {
                         try ReminderService.saveReminderToMyList(myList: myList, reminderTitle: title)
                     } catch {
-                        print("Debug: error \(error.localizedDescription)")
+                        print(error.localizedDescription)
                     }
                 }
             }

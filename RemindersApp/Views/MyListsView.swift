@@ -13,9 +13,10 @@ struct MyListsView: View {
     
     var body: some View {
         NavigationStack {
+            
             if myLists.isEmpty {
                 Spacer()
-                Text("No reminders found!")
+                Text("No reminders found")
             } else {
                 ForEach(myLists) { myList in
                     NavigationLink(value: myList) {
@@ -23,7 +24,7 @@ struct MyListsView: View {
                             MyListCellView(myList: myList)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding([.leading], 10)
-                                .font(.title2)
+                                .font(.title3)
                             Divider()
                         }
                     }
@@ -33,6 +34,7 @@ struct MyListsView: View {
                             .navigationTitle(myList.name)
                     }
             }
+            
         }
     }
 }
