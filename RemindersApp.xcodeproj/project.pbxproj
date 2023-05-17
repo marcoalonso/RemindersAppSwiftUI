@@ -15,6 +15,8 @@
 		6C1631CF29F84A990044E21A /* RemindersModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C1631CD29F84A990044E21A /* RemindersModel.xcdatamodeld */; };
 		6C1631D229F84BE60044E21A /* MyList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1631D129F84BE60044E21A /* MyList+CoreDataClass.swift */; };
 		6C1631D429F84BFF0044E21A /* MyList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1631D329F84BFF0044E21A /* MyList+CoreDataProperties.swift */; };
+		6C248E822A15674D004F6647 /* ReminderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C248E812A15674D004F6647 /* ReminderCellView.swift */; };
+		6C248E852A1569D2004F6647 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C248E842A1569D2004F6647 /* Date+Extensions.swift */; };
 		6C3F969B2A02D87C007FFF85 /* MyListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F969A2A02D87C007FFF85 /* MyListsView.swift */; };
 		6C3F969D2A02DA9A007FFF85 /* MyListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F969C2A02DA9A007FFF85 /* MyListCellView.swift */; };
 		6C3F969F2A02DAC3007FFF85 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F969E2A02DAC3007FFF85 /* PreviewData.swift */; };
@@ -36,6 +38,8 @@
 		6C1631CE29F84A990044E21A /* RemindersModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemindersModel.xcdatamodel; sourceTree = "<group>"; };
 		6C1631D129F84BE60044E21A /* MyList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyList+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6C1631D329F84BFF0044E21A /* MyList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6C248E812A15674D004F6647 /* ReminderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCellView.swift; sourceTree = "<group>"; };
+		6C248E842A1569D2004F6647 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		6C3F969A2A02D87C007FFF85 /* MyListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListsView.swift; sourceTree = "<group>"; };
 		6C3F969C2A02DA9A007FFF85 /* MyListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListCellView.swift; sourceTree = "<group>"; };
 		6C3F969E2A02DAC3007FFF85 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 		6C1631BB29F849690044E21A /* RemindersApp */ = {
 			isa = PBXGroup;
 			children = (
+				6C248E832A1569C8004F6647 /* Extensions */,
 				6C8B0F4B2A0211CE00E29FF5 /* Transformers */,
 				6C8B0F482A02101100E29FF5 /* Services */,
 				6C1631D029F84BD20044E21A /* Models */,
@@ -116,6 +121,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6C248E832A1569C8004F6647 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6C248E842A1569D2004F6647 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6C8B0F482A02101100E29FF5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +155,7 @@
 				6C3F969C2A02DA9A007FFF85 /* MyListCellView.swift */,
 				6CCCDA232A0437890093D778 /* MyListDetailView.swift */,
 				6C6A60FB2A12789B00CA889A /* ReminderListView.swift */,
+				6C248E812A15674D004F6647 /* ReminderCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,11 +232,13 @@
 			files = (
 				6C3F969D2A02DA9A007FFF85 /* MyListCellView.swift in Sources */,
 				6CA873BB29F889E6004EEAD6 /* ColorPickerView.swift in Sources */,
+				6C248E822A15674D004F6647 /* ReminderCellView.swift in Sources */,
 				6C1631BF29F849690044E21A /* HomeView.swift in Sources */,
 				6C1631CF29F84A990044E21A /* RemindersModel.xcdatamodeld in Sources */,
 				6C3F969F2A02DAC3007FFF85 /* PreviewData.swift in Sources */,
 				6C8B0F4D2A0211DE00E29FF5 /* UIColorTransformer.swift in Sources */,
 				6C1631BD29F849690044E21A /* RemindersAppApp.swift in Sources */,
+				6C248E852A1569D2004F6647 /* Date+Extensions.swift in Sources */,
 				6C1631D429F84BFF0044E21A /* MyList+CoreDataProperties.swift in Sources */,
 				6CA873B929F888E1004EEAD6 /* AddNewListView.swift in Sources */,
 				6C1631D229F84BE60044E21A /* MyList+CoreDataClass.swift in Sources */,
