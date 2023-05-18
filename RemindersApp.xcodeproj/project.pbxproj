@@ -29,6 +29,7 @@
 		6CEA6BEA2A16AC95008C3505 /* ReminderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA6BE92A16AC95008C3505 /* ReminderDetailView.swift */; };
 		6CEA6BED2A16AD36008C3505 /* ReminderEditConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA6BEC2A16AD36008C3505 /* ReminderEditConfig.swift */; };
 		6CEA6BF02A16AE01008C3505 /* CustomOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA6BEF2A16AE01008C3505 /* CustomOperator.swift */; };
+		6CEA6BF22A16DB9C008C3505 /* SelectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA6BF12A16DB9C008C3505 /* SelectListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		6CEA6BE92A16AC95008C3505 /* ReminderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDetailView.swift; sourceTree = "<group>"; };
 		6CEA6BEC2A16AD36008C3505 /* ReminderEditConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEditConfig.swift; sourceTree = "<group>"; };
 		6CEA6BEF2A16AE01008C3505 /* CustomOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperator.swift; sourceTree = "<group>"; };
+		6CEA6BF12A16DB9C008C3505 /* SelectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				6C6A60FB2A12789B00CA889A /* ReminderListView.swift */,
 				6C248E812A15674D004F6647 /* ReminderCellView.swift */,
 				6CEA6BE92A16AC95008C3505 /* ReminderDetailView.swift */,
+				6CEA6BF12A16DB9C008C3505 /* SelectListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				6CA873B929F888E1004EEAD6 /* AddNewListView.swift in Sources */,
 				6C1631D229F84BE60044E21A /* MyList+CoreDataClass.swift in Sources */,
 				6CEA6BF02A16AE01008C3505 /* CustomOperator.swift in Sources */,
+				6CEA6BF22A16DB9C008C3505 /* SelectListView.swift in Sources */,
 				6C1631CC29F849880044E21A /* CoreDataProvider.swift in Sources */,
 				6C3F969B2A02D87C007FFF85 /* MyListsView.swift in Sources */,
 				6C6A60FC2A12789B00CA889A /* ReminderListView.swift in Sources */,

@@ -43,6 +43,18 @@ struct ReminderDetailView: View {
                         
                     }
                     
+                    Section {
+                        NavigationLink {
+                            SelectListView(selectedList: $reminder.list)
+                        } label: {
+                            HStack {
+                                Text("List")
+                                Spacer()
+                                Text(reminder.list!.name)
+                            }
+                        }
+                    }
+                    
                 }
             }.listStyle(.insetGrouped)
         }
