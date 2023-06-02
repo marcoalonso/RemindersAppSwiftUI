@@ -11,9 +11,9 @@ struct ReminderListView: View {
     
     let reminders: FetchedResults<Reminder>
     
-    private func reminderCheckedChanged(reminder: Reminder) {
+    private func reminderCheckedChanged(reminder: Reminder, isCompleted: Bool) {
         var editConfig = ReminderEditConfig(reminder: reminder)
-        editConfig.isCompleted = !reminder.isCompleted
+        editConfig.isCompleted = isCompleted
         
         do {
          let _ = try ReminderService.updateReminder(reminder: reminder, editConfig: editConfig)
@@ -29,8 +29,8 @@ struct ReminderListView: View {
                 case .onSelect(let reminder):
                     print("onSelect")
                     
-                case .onCheckChange(let reminder):
-                    reminderCheckedChanged(reminder: reminder)
+                case .onCheckChange(let reminder, let isCompleted):
+                    reminderCheckedChanged(reminder: reminder, isCompleted: isCompleted)
                     
                 case .onInfo:
                     print("onInfo")
