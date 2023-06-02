@@ -11,6 +11,17 @@ struct ReminderListView: View {
     
     let reminders: FetchedResults<Reminder>
     
+    private func reminderCheckedChanged(reminder: Reminder) {
+        var editConfig = ReminderEditConfig(reminder: reminder)
+        editConfig.isCompleted = !reminder.isCompleted
+        
+        do {
+         let _ = try ReminderService.updateReminder(reminder: reminder, editConfig: editConfig)
+        } catch {
+            print("Debug: error \(error.localizedDescription)")
+        }
+    }
+    
     var body: some View {
         List(reminders) { reminder in
             ReminderCellView(reminder: reminder) { event in
@@ -19,7 +30,7 @@ struct ReminderListView: View {
                     print("onSelect")
                     
                 case .onCheckChange(let reminder):
-                    print("onCheckChange")
+                    reminderCheckedChanged(reminder: reminder)
                     
                 case .onInfo:
                     print("onInfo")

@@ -26,6 +26,17 @@ class ReminderService {
         try save()
     }
     
+    static func updateReminder(reminder: Reminder, editConfig: ReminderEditConfig) throws -> Bool {
+        let reminderToUptadte = reminder
+        reminder.isCompleted = editConfig.isCompleted
+        reminder.title = editConfig.title
+        reminderToUptadte.notes = editConfig.notes
+        reminderToUptadte.reminderDate = editConfig.hasDate ? editConfig.reminderDate : nil
+        reminderToUptadte.reminderTime = editConfig.hasTime ? editConfig.reminderTime : nil
+        try save()
+        return true
+    }
+    
     static func saveReminderToMyList(myList: MyList, reminderTitle: String) throws {
         let reminder = Reminder(context: viewContext)
         reminder.title = reminderTitle

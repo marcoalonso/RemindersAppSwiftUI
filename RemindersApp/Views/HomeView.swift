@@ -19,7 +19,7 @@ struct HomeView: View {
                 
                 MyListsView(myLists: myListResults)
                 
-                Spacer()
+                //Spacer()
                 
                 Button {
                     isPresented = true
